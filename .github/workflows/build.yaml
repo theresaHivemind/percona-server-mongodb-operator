@@ -49,7 +49,7 @@ jobs:
       - name: Build & Push Docker Image
         uses: docker/build-push-action@v3
         with:
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           context: ./build
           push: true
           tags: ${{ env.REGISTRY }}/${{ steps.string.outputs.lowercase }}/${{ env.IMAGE_NAME }}:latest

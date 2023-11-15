@@ -41,7 +41,7 @@ LABEL name="Percona Server for MongoDB Operator" \
 
 COPY --from=go_builder /usr/local/bin/percona-server-mongodb-operator /usr/local/bin/percona-server-mongodb-operator
 COPY --from=go_builder /licenses/* /licenses
-COPY ../LICENSE /licenses/
+COPY LICENSE /licenses/
 COPY --from=go_builder /usr/local/bin/mongodb-healthcheck /mongodb-healthcheck
 # Mozilla licensed source code should be included
 COPY  --from=go_builder /lib/hashicorp /lib
